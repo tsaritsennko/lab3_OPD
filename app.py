@@ -12,7 +12,6 @@ def solve():
     b = float(request.form['b'])
     c = float(request.form['c'])
 
-    # Вычисление корней квадратного уравнения
     discriminant = b**2 - 4*a*c
     if discriminant > 0:
         root1 = (-b + discriminant**0.5) / (2*a)
