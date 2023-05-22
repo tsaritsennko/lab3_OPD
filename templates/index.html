@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for( 'static', filename='style.css', v=1)}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-container">
+             <h1>Квадратное уравнение</h1>
+            <form action="/solve" method="POST">
+                <label for="a">Коэффициент a:</label>
+                <input type="text" name="a" id="a" required><br><br>
+                <label for="b">Коэффициент b:</label>
+                <input type="text" name="b" id="b" required><br><br>
+                <label for="c">Коэффициент c:</label>
+                <input type="text" name="c" id="c" required><br><br>
+                <input type="submit" value="Решить">
+            </form>
+            <h1>Результат</h1>
+            <p>{{ roots }}</p>
+        </div>
+    </div>
+
+</body>
+</html>
