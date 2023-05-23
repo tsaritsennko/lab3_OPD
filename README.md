@@ -6,5 +6,5 @@
 
 Нахождение корней квадратного уравнения
 
-![изображение](https://github.com/tsaritsennko/lab3_OPD/assets/125185084/78db7a3e-69d6-475c-a12e-fa26d901bbb0)
+
 
