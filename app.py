@@ -1,17 +1,17 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__)#Создаем 'экземпляр  приложения flask
 
-@app.route('/')
+@app.route('/')#Декоратор,который связывает путь "/" с функцией index
 def index():
-    return render_template('index.html')
+    return render_template('index.html') #Отображение страницы из файла index.html
 
-@app.route('/solve', methods=['POST'])
+@app.route('/solve', methods=['POST']) #Декоратор,который связывает путь "/solve",который принимает post запросы
 def solve():
-    a = float(request.form['a'])
+    a = float(request.form['a'])#извлечение значений переменных из post-запроса
     b = float(request.form['b'])
     c = float(request.form['c'])
-
+#Формулы дискриминанта и корней уравнения
     discriminant = b**2 - 4*a*c
     if discriminant > 0:
         root1 = (-b + discriminant**0.5) / (2*a)
